@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "402074549643",
+    "firebase_url": "https://value-education-aa2a0.firebaseio.com",
+    "project_id": "value-education-aa2a0",
+    "storage_bucket": "value-education-aa2a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402074549643:android:d8d2e152bce8be12",
+        "android_client_info": {
+          "package_name": "com.valueeducation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402074549643-v375ucaah8etr0t196trovgb27tva5t8.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "402074549643-5dge4nbitjk4m64go47pdj9pc03rpkdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOOscfwpYUbO7PkG1gsop40PCUZmCjkVA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-81365729-4"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

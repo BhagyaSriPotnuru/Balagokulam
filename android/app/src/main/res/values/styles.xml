@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+ <!--        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:switchStyle">@style/myswitch</item> -->
+    </style>
+  <!--   <style name="myswitch" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">#FF0000</item>
+        <item name="colorControlActivated">#ff0000</item>
+    </style> -->
+</resources>
