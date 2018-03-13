@@ -17,8 +17,6 @@ import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import com.cboy.rn.splashscreen.SplashScreen;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.imagepicker.ImagePickerPackage;
-import com.audioStreaming.ReactNativeAudioStreamingPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
 
 import android.content.Intent;

@@ -126,8 +126,6 @@ android {
 
 dependencies {
     compile project(':react-native-youtube')
-    compile project(':react-native-audio-streaming')
-    compile project(':react-native-vector-icons')
     compile project(':react-native-play-audio')
     compile project(':react-native-fetch-blob')
     compile project(':react-native-sqlite-storage')
