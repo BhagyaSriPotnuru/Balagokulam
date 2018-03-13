@@ -144,7 +144,7 @@ class ValueEducation extends Component {
         })
         this.getProfileInfo()
         if (!tablesUpdated) {
-          if (DeviceInfo.getVersion() == '1.1.11') {
+          if (DeviceInfo.getVersion() == '1.2.3') {
             db.transaction((tx) => {             
               tx.executeSql('drop table if exists record_data')
               tx.executeSql('drop table if exists images')

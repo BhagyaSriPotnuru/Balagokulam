@@ -3,7 +3,6 @@ package com.valueeducation;
 import android.app.Application;
 import android.util.Log;
 
-import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
 import com.RNPlayAudio.RNPlayAudioPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import org.pgsqlite.SQLitePluginPackage;
@@ -18,6 +17,9 @@ import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.imagepicker.ImagePickerPackage;
 
 import com.facebook.react.ReactApplication;
+import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
+import com.audioStreaming.ReactNativeAudioStreamingPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -43,6 +45,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new ReactNativeYouTube(),
+          new ReactNativeAudioStreamingPackage(),
+          new VectorIconsPackage(),
           new SQLitePluginPackage(),
           new OrientationPackage(),
           new TextToSpeechPackage(),
@@ -54,8 +59,7 @@ public class MainApplication extends Application implements ReactApplication {
           new GoogleAnalyticsBridgePackage(),
           new ImagePickerPackage(),
           new RNFetchBlobPackage(),
-          new RNPlayAudioPackage(),
-          new ReactNativeYouTube()
+          new RNPlayAudioPackage()
       );
     }
   };

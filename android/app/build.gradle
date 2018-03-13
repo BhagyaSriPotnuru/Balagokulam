@@ -89,8 +89,8 @@ android {
         applicationId "com.valueeducation"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 27
-        versionName "1.2.2"
+        versionCode 28
+        versionName "1.2.3"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -126,6 +126,8 @@ android {
 
 dependencies {
     compile project(':react-native-youtube')
+    compile project(':react-native-audio-streaming')
+    compile project(':react-native-vector-icons')
     compile project(':react-native-play-audio')
     compile project(':react-native-fetch-blob')
     compile project(':react-native-sqlite-storage')

@@ -73,7 +73,7 @@ class HomeNavBar extends Component {
           }} style={{ paddingVertical:10, paddingLeft: 10, paddingRight: 40 }}>
             <Icon name="bars" color={Colors.white} size={20} />
           </TouchableOpacity>
-          <Text style={[styles.homeTitle,{paddingLeft: 35}]}>Home</Text>
+          <Text style={[styles.homeTitle,{paddingLeft: 30}]}>Home</Text>
           <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
           {this.props.calendar ?
             <TouchableOpacity onPress={() => {

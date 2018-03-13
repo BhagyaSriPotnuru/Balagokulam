@@ -10,6 +10,7 @@ import {
   BackAndroid,
   Alert,
   ScrollView,
+  WebView,
 } from 'react-native'
 import GoogleAnalytics from 'react-native-google-analytics-bridge'
 import { connect } from 'react-redux'
@@ -250,7 +251,7 @@ class ContentScreen extends Component {
 
   getContentByDate = (position) => {
     const { dispatch } = this.props
-    this.refs.scrollview.scrollTo({ y: 0 })
+    this.refs.scrollview && this.refs.scrollview.scrollTo({ y: 0 })
     try {
       dispatch(isEnThought(true))
       dispatch(isEnStory(true))
@@ -430,6 +431,7 @@ class ContentScreen extends Component {
   } 
 
   render() {
+    let story = this.props.story
     let rows = []
     if(this.state.contentList) {
       rows = this.state.contentList.map((r, i) => {
@@ -472,6 +474,15 @@ class ContentScreen extends Component {
           }       
 
           <View style={[styles.tabContent, { marginTop: 10, backgroundColor: this.props.tabcontent, borderColor: this.props.statusBar }]}>
+           { story && (story.substring(0,4) === "Http" || story.substring(0,4) === "http") ?
+             this.props.reach === 'NONE' ?
+              <Text style={[styles.textColor, {color: this.props.button, marginBottom: 10}]}>
+                You are offline. Please connect to internet to view the form.
+              </Text> : 
+              <WebView
+                source={{uri: story}}
+              /> 
+            :
             <ScrollView
               showsVerticalScrollIndicator={false}
               keyboardShouldPersistTaps={true}
@@ -528,8 +539,8 @@ class ContentScreen extends Component {
                   </View> : null }
               </View> :
               <Spinner visible={true} color={this.props.navBar} overlayColor={'transparent'} /> }
-            </ScrollView>
-            {this.props.success ? 
+            </ScrollView>}
+            {this.props.success && ((story && (story.substring(0,4) !== "Http" && story.substring(0,4) !== "http"))) || !story ? 
             <ContentFooter mediaList={this.state.mediaList} /> : null }
           </View>
 
@@ -549,7 +560,7 @@ class ContentScreen extends Component {
           <Image
             source={{ uri: this.props.imageValue }}
             style={{
-              height: 200,
+              height: 500,
               resizeMode: 'contain',
               flex: 1,
             }}
